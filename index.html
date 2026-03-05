@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EZDT Gaming Center Bandung</title>
+
+<link rel="icon" sizes="16x16" href="favicon.png">
+<link rel="icon" sizes="32x32" href="favicon.png">
+<link rel="icon" sizes="48x48" href="favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Orbitron',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#0a0a0a;
+color:white;
+overflow-x:hidden;
+}
+
+/* LOADER */
+
+#loader{
+position:fixed;
+width:100%;
+height:100%;
+background:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.loader-logo{
+width:180px;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+0%{transform:scale(1)}
+50%{transform:scale(1.1)}
+100%{transform:scale(1)}
+}
+
+.progress{
+width:250px;
+height:6px;
+background:#111;
+margin-top:30px;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+width:0%;
+height:100%;
+background:#00e5ff;
+animation:loading 3s linear forwards;
+}
+
+@keyframes loading{
+100%{width:100%}
+}
+
+/* NAVBAR */
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 80px;
+background:#0d0d0d;
+border-bottom:1px solid #222;
+position:sticky;
+top:0;
+z-index:999;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:45px;
+}
+
+.logo h1{
+font-size:22px;
+color:#00e5ff;
+}
+
+nav ul{
+display:flex;
+gap:35px;
+list-style:none;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:#00e5ff;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:url("https://image2url.com/r2/default/images/1772684897570-7c6088be-28d5-4994-a46e-33fd369f870f.jpeg") center/cover;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+color:#00e5ff;
+text-shadow:0 0 20px #00e5ff;
+}
+
+.hero p{
+margin-top:15px;
+color:#aaa;
+}
+
+.hero button{
+margin-top:30px;
+padding:12px 35px;
+border:none;
+background:#00e5ff;
+color:black;
+font-weight:bold;
+cursor:pointer;
+border-radius:6px;
+transition:.3s;
+}
+
+.hero button:hover{
+transform:scale(1.1);
+}
+
+/* SECTION */
+
+.section{
+padding:100px 10%;
+text-align:center;
+}
+
+.section h2{
+font-size:40px;
+margin-bottom:40px;
+color:#00e5ff;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:#111;
+padding:35px;
+border-radius:10px;
+border:1px solid #222;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #00e5ff;
+}
+
+.card h3{
+color:#00e5ff;
+margin-bottom:15px;
+}
+
+.card ul{
+list-style:none;
+line-height:1.8;
+color:#aaa;
+margin-top:10px;
+}
+
+.price{
+margin-top:15px;
+font-size:22px;
+color:white;
+}
+
+/* CONTACT */
+
+.contact a{
+background:#00e5ff;
+padding:15px 25px;
+color:black;
+text-decoration:none;
+border-radius:8px;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+border-top:1px solid #222;
+color:#777;
+margin-top:80px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- LOADER -->
+
+<div id="loader">
+
+<img src="EZDT GAMING No Background.png" class="loader-logo">
+
+<div class="progress">
+<div class="progress-bar"></div>
+</div>
+
+</div>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+<img src="EZDT GAMING No Background.png">
+<h1>EZDT</h1>
+</div>
+
+<ul>
+<li><a href="#">Home</a></li>
+<li><a href="#about">Tentang</a></li>
+<li><a href="#services">Fasilitas</a></li>
+<li><a href="#price">Harga</a></li>
+<li><a href="#contact">Booking</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>EZDT GAMING CENTER</h1>
+<p>Stop Dreaming Start Winning</p>
+
+<button onclick="scrollToBooking()">PLAY NOW</button>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about" class="section">
+
+<h2>Tentang Kami</h2>
+
+<p>
+EZDT Gaming adalah gaming center modern di Bandung dengan PC performa tinggi,
+tempat nyaman, dan koneksi internet super cepat untuk pengalaman gaming maksimal.
+
+Fitur lengkap untuk streaming atau recording gameplay.
+</p>
+
+</section>
+
+<!-- SERVICES -->
+
+<section id="services" class="section">
+
+<h2>Fasilitas</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🥇 GOLD</h3>
+<ul>
+<li>CPU : Intel i5 10400F</li>
+<li>GPU : RTX 4060</li>
+<li>RAM : 16GB</li>
+<li>Monitor 144hz</li>
+<li>Gaming Chair</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>🥇 GOLD PLUS</h3>
+<ul>
+<li>CPU : Intel i5 10400F</li>
+<li>GPU : RTX 4060</li>
+<li>RAM : 16GB</li>
+<li>Monitor 144hz</li>
+<li>Gaming Chair</li>
+<li>Webcam</li>
+<li>Streaming Ready</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>💎 PLATINUM</h3>
+<ul>
+<li>CPU : Intel i5 14400F</li>
+<li>GPU : RTX 5060 Ti</li>
+<li>RAM : 32GB</li>
+<li>Dual Monitor</li>
+<li>Premium Gaming Chair</li>
+<li>Premium Room</li>
+<li>Webcam</li>
+</ul>
+</div>
+
+</div>
+
+</section>
+
+<!-- PRICE -->
+
+<section id="price" class="section">
+
+<h2>Harga Rental</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🪙 GOLD</h3>
+<div class="price">Rp 20.000 / Jam</div>
+</div>
+
+<div class="card">
+<h3>🪙 GOLD PLUS</h3>
+<div class="price">Rp 25.000 / Jam</div>
+</div>
+
+<div class="card">
+<h3>💎 PLATINUM</h3>
+<div class="price">Rp 30.000 / Jam</div>
+</div>
+
+<div class="card">
+<h3>⭐ MEMBER</h3>
+<div class="price">Harga Khusus Member</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact" class="section contact">
+
+<h2>Booking Sekarang</h2>
+
+<p>
+📍 Surapati Core, Jl. Anggrek Boulevard Pasirluyu,
+Cibeunying Kidul, Bandung
+</p>
+
+<br>
+
+<a href="https://wa.me/628111122941">
+Booking via WhatsApp
+</a>
+
+<br><br>
+
+<iframe
+src="https://maps.google.com/maps?q=EZDT%20Gaming%20Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed"
+width="80%"
+height="300"
+style="border:0;">
+</iframe>
+
+</section>
+
+<footer>
+
+© 2026 EZDT Gaming Center Bandung
+
+</footer>
+
+<script>
+
+window.onload=function(){
+
+setTimeout(()=>{
+
+document.getElementById("loader").style.opacity="0";
+
+setTimeout(()=>{
+document.getElementById("loader").style.display="none";
+},500);
+
+},3000);
+
+}
+
+function scrollToBooking(){
+document.getElementById("contact")
+.scrollIntoView({behavior:"smooth"});
+}
+
+</script>
+
+</body>
+</html>
