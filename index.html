@@ -16,6 +16,39 @@
 
 <style>
 
+/* MOBILE NAVBAR FIX */
+
+@media (max-width:768px){
+
+nav{
+padding:15px 10px;
+flex-direction:row;
+}
+
+nav ul{
+display:flex;
+flex-direction:row;   /* paksa horizontal */
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;       /* kalau sempit dia turun baris tapi tetap rapi */
+gap:10px;
+}
+
+nav ul li{
+display:inline-block;
+}
+
+nav ul li a{
+font-size:12px;
+padding:4px 6px;
+}
+
+.logo h1{
+font-size:18px;
+}
+
+}
+
 *{
 margin:0;
 padding:0;
