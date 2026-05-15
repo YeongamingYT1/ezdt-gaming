@@ -382,6 +382,11 @@ transform:translateY(-10px);
 box-shadow:0 0 25px #00e5ff;
 }
 
+.hero-buttons button{
+font-size:15px;
+min-width:220px;
+}
+
 </style>
 </head>
 
@@ -415,7 +420,7 @@ box-shadow:0 0 25px #00e5ff;
 <li><a href="#facilities">Fasilitas</a></li>
 <li><a href="#service">Spec PC</a></li>
 <li><a href="#price">Harga</a></li>
-<li><a href="#contact">Booking</a></li>
+<li><a href="#contact">Member</a></li>
 </ul>
 
 </nav>
@@ -430,8 +435,13 @@ box-shadow:0 0 25px #00e5ff;
 🔥 PC Available: <span id="pc-count">32</span>
 </div>
 
-<button onclick="scrollToSetup()">LIHAT SPEC PC</button>
-<button onclick="scrollToBooking()">BOOKING</button>
+<div class="hero-buttons">
+  <button onclick="scrollToSetup()">LIHAT SPEC PC</button>
+
+  <button class="member-btn" onclick="scrollToBooking()">
+    BOOKING PC
+  </button>
+</div>
 </section>
 
 <!-- WHY -->
@@ -702,6 +712,8 @@ Fitur lengkap untuk streaming atau recording gameplay.
 
 <section id="contact" class="section contact">
 
+<div class="card" style="border:2px solid #00e5ff;">
+
 <h2>Booking Sekarang</h2>
 
 <p>
@@ -709,19 +721,31 @@ Fitur lengkap untuk streaming atau recording gameplay.
 Cibeunying Kidul, Bandung
 </p>
 
+
+<br>
+
+<h3>⭐ MEMBER ONLY</h3>
+
+
+<div class="price">
+Booking PC hanya untuk member EZDT
+</div>
+
+<p style="margin-top:15px;color:#aaa;">
+Daftar member untuk akses booking dan benefit premium.
+</p>
 <p>
 Member EZDT mendapatkan akses booking PC,
 harga spesial, dan prioritas setup premium.
 </p>
 
-<br>
-
+<br><br>
 <a href="https://wa.me/628111122941?text=Halo%20Admin%20EZDT,%20saya%20ingin%20daftar%20member."
 target="_blank">
-Daftar Member via WhatsApp
+===== JOIN MEMBER =====
 </a>
 
-<br><br>
+<br><br></br>
 
 <iframe
 src="https://maps.google.com/maps?q=EZDT%20Gaming%20Bandung&t=&z=15&ie=UTF8&iwloc=&output=embed"
@@ -731,6 +755,8 @@ style="border:0;">
 </iframe>
 
 </section>
+
+</div>
 
 <footer>
 
